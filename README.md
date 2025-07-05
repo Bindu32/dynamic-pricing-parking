@@ -21,17 +21,54 @@ Urban parking lots face inefficient use when prices are static. This project bui
 
 ## 🧠 Models Implemented
 
+## 🧠 Models Implemented
+
 ### 🔹 Model 1: Baseline Linear Model
-- Based on occupancy and capacity.
-- Simple linear price increase.
+- Uses only **Occupancy** and **Capacity**
+- Increases price linearly as occupancy increases
+- Acts as a reference model
+- Formula:
+  \[
+  P_{t+1} = P_t + \alpha \cdot \left(\frac{\text{Occupancy}}{\text{Capacity}}\right)
+  \]
 
-### 🔹 Model 2: Demand-Based Model
-- Uses: Occupancy, QueueLength, Traffic, VehicleType, IsSpecialDay
-- Computes a weighted demand function.
-- Normalizes demand and adjusts pricing smoothly.
+---
 
-### 🔹 Model 3 (Optional): Competitive Pricing
-- To be implemented. Adjusts price based on nearby parking lot pricing and proximity.
+### 🔹 Model 2: Demand-Based Pricing Model
+- Uses multiple real-world features:
+  - Occupancy / Capacity
+  - Queue Length
+  - Traffic Level (low/medium/high)
+  - Vehicle Type (car, bike, truck)
+  - Special Day Indicator (0 or 1)
+- Computes a weighted demand score using:
+  \[
+  \text{Demand} = \alpha \cdot \left(\frac{\text{Occupancy}}{\text{Capacity}}\right) + \beta \cdot \text{QueueLength} - \gamma \cdot \text{TrafficLevel} + \delta \cdot \text{IsSpecialDay} + \epsilon \cdot \text{VehicleTypeWeight}
+  \]
+- Normalized and used to adjust the base price:
+  \[
+  \text{Price} = 10 \cdot (1 + \lambda \cdot \text{NormalizedDemand})
+  \]
+- Ensures smooth price changes and bounds (between \$5 and \$20)
+
+---
+
+### 🔹 Model 3: Competitive Pricing Model (Advanced & Optional)
+- Builds on top of Model 2 by incorporating **competition** between nearby lots
+- Steps:
+  1. Calculates **geographic distance** between parking lots using Haversine formula
+  2. Identifies **nearby competitors within 1 km**
+  3. Compares each lot's price to the **average price of competitors**
+  4. Adjusts price accordingly:
+     - If competitors are **cheaper**, reduce price slightly
+     - If competitors are **more expensive**, increase price
+- Final price is stored as `CompAdjustedPrice`
+
+> This model simulates real-world competitive behavior and makes pricing more adaptive and business-aware.
+
+---
+
+
 
 ---
 
