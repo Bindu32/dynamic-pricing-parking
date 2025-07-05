@@ -87,6 +87,13 @@ Urban parking lots face inefficient use when prices are static. This project bui
 
 ---
 
+## Dashboard
+![Screenshot 2025-07-05 234642](https://github.com/user-attachments/assets/cbd673cf-2cfe-4a53-9612-fa53740ef38e)
+![Screenshot 2025-07-05 235522](https://github.com/user-attachments/assets/cb12b765-df91-426a-88a2-4fea065743e2)
+
+
+
+
 ## 🧮 Machine Learning Concepts Used
 
 - Feature Engineering
@@ -105,6 +112,16 @@ Urban parking lots face inefficient use when prices are static. This project bui
 4. View real-time price changes and plots
 
 ---
+
+## ✅ Features Achieved
+
+- ✅ Dynamic price changes using real-time features
+- ✅ 3 pricing models (Baseline → Demand → Competition)
+- ✅ Realistic caps and smooth transitions
+- ✅ Dashboard with dropdown to explore each parking lot
+- ✅ Interactive visualizations using Panel + Bokeh
+- ✅ Ready to deploy using Pathway streaming (simulated in Colab)
+
 
 ## ✍️ Author
 
