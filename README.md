@@ -21,8 +21,6 @@ Urban parking lots face inefficient use when prices are static. This project bui
 
 ## 🧠 Models Implemented
 
-## 🧠 Models Implemented
-
 ### 🔹 Model 1: Baseline Linear Model
 - Uses only **Occupancy** and **Capacity**
 - Increases price linearly as occupancy increases
@@ -31,6 +29,8 @@ Urban parking lots face inefficient use when prices are static. This project bui
   \[
   P_{t+1} = P_t + \alpha \cdot \left(\frac{\text{Occupancy}}{\text{Capacity}}\right)
   \]
+
+![Screenshot 2025-07-06 185642](https://github.com/user-attachments/assets/163da5c9-df6b-46dc-b31b-4524853ba5af)
 
 ---
 
@@ -50,6 +50,9 @@ Urban parking lots face inefficient use when prices are static. This project bui
   \text{Price} = 10 \cdot (1 + \lambda \cdot \text{NormalizedDemand})
   \]
 - Ensures smooth price changes and bounds (between \$5 and \$20)
+
+- ![Screenshot 2025-07-06 185707](https://github.com/user-attachments/assets/23cb5031-9d6f-4f38-a8a0-766452887471)
+
 
 ---
 
@@ -75,20 +78,30 @@ Urban parking lots face inefficient use when prices are static. This project bui
 ## 📈 Visualizations
 
 - **Matplotlib/Bokeh** for:
-  - Price vs Time plot
-  - Comparisons between models
+  - Stimulated Live Price
+  - ![Screenshot 2025-07-05 233835](https://github.com/user-attachments/assets/a38d33f4-cf85-4c91-9680-de76ba2534b8)
+
+  - Real Time Price
+  - ![Screenshot 2025-07-06 185838](https://github.com/user-attachments/assets/29cfd4d6-f651-4baf-8a81-cc097a41ad3c)
+
 
 ---
 
 ## 🔄 Architecture Flow
 
-📌 _Architecture diagram will go here (upload image as `architecture.png` and embed)_
+![ChatGPT Image Jul 6, 2025, 07_30_15 PM](https://github.com/user-attachments/assets/c4f74bac-38b5-4461-884b-7a65bc4eeefa)
+
 
 
 ---
 
 ## Dashboard
+Parking Lot Price Dashboard
+
 ![Screenshot 2025-07-05 234642](https://github.com/user-attachments/assets/cbd673cf-2cfe-4a53-9612-fa53740ef38e)
+
+Comparison: Demand vs Competitive
+
 ![Screenshot 2025-07-05 235522](https://github.com/user-attachments/assets/cb12b765-df91-426a-88a2-4fea065743e2)
 
 
