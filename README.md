@@ -91,7 +91,37 @@ Urban parking lots face inefficient use when prices are static. This project bui
 
 ![ChatGPT Image Jul 6, 2025, 07_30_15 PM](https://github.com/user-attachments/assets/c4f74bac-38b5-4461-884b-7a65bc4eeefa)
 
+The system architecture illustrates the complete end-to-end pipeline for the dynamic pricing engine. It highlights the key stages from raw data ingestion to final visualization and dashboard output.
 
+The architecture diagram was included in Section 10: Visualizations for reference.
+
+🔁 Pipeline Overview:
+Raw Data Input
+Timestamped CSV file containing parking lot events.
+
+Data Preprocessing
+
+Timestamp merging
+
+Feature engineering
+
+Normalization
+
+Categorical encoding
+
+Modeling Logic
+
+Model 1: Baseline (Occupancy-based)
+
+Model 2: Demand-Based
+
+Model 3: Competitive Adjustment
+
+Real-Time Simulation
+Simulated in Google Colab with row-by-row updates.
+
+Dashboard Visualization
+Interactive Bokeh + Panel dashboard showing pricing over time.
 
 ---
 
